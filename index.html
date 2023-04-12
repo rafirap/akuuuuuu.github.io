@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Growtopia Script Deobfuscator - Dream Ninjas</title>
+        <script src="../cdn-cgi/apps/head/EBPjnEE6P70ZcQIXXCtJnCOtFAk.js"></script><link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet" type="text/css">
+        <link href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Snowstorm/20131208/snowstorm-min.js" integrity="sha512-rMkLONrw50boYG/6Ku0E8VstfWMRn5D0dX3QZS26Mg0rspYq4EHxYOULuPbv9Be2HBbrrmN8dpPgYUeJ4bINCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link href="../assets/style.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/xt256.min.css" integrity="sha512-fhvZU0PRhieZyHjHD1sG4Zvo5EJjsnx90draikv9gBEFre1UXo4Neg3nT4xZ71TEdOLXif1C5llTy0Ughy+xSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <!-- SEO and Embedded Data -->
+        <meta charset="utf-8">
+        <meta content="Katie" name="author">
+        <meta itemprop="name" content="Growtopia Script Deobfuscator - Dream Ninjas">
+        <meta itemprop="description" content="A tool that will quickly deobfuscate PiterP, Yasugami and LuaCompiled GrowLauncher/Growpai scripts.">
+        <meta itemprop="image" content="/assets/app-512.png">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#26ED26">
+        <meta property="og:type" content="website">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        <meta property="og:url" content="https://dreamninjas.eu/tools/piterp">
+        <meta property="og:image" content="/assets/app-512.png">
+        <link rel="shortcut icon" href="../favicon.ico">
+        <meta name="apple-mobile-web-app-capable" content="no">
+        <meta name="apple-mobile-web-app-title" content="Growtopia Script Deobfuscator - Dream Ninjas">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta content="A tool that will quickly deobfuscate PiterP, Yasugami and LuaCompiled GrowLauncher/Growpai scripts." name="description">
+        <meta name="theme-color" content="#26ED26">
+    </head>
+    <body>
+        <div style="width: 100%;" id="bartotal">
+            <div id="bar" style="height:3px;width:0%;background-color:green;"></div>
+        </div>
+        <div class="header">
+            <div class="logoblock">
+                <div class="logo">
+                    Dream Ninjas
+                </div>
+                <div class="search">
+                    <form method="POST" class="searchform">
+                        <input type="search" name="search">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="navtabs">
+                <div class="main">
+                    <ul>
+                        <li><a href="https://dreamninjas.eu/home/">Home</a></li>
+                        <li><a href="https://dreamninjas.eu/blog/">Blog</a></li>
+                        <li><a class="active" href="index.html">Tools</a></li>
+                        <li><a href="https://dreamninjas.eu/scanner/">Scanner</a></li>
+                    </ul>
+                </div>
+                <div class="secondary">
+                    <ul class="mobile-show">
+                        <li><a onclick="ToggleMenu()"><i class="mdi mdi-apps"></i></a></li>
+                    </ul>
+                    <ul class="mobile-menu">
+                        <li><a href="https://dreamninjas.eu/login/">Login</a></li>
+                        <li><a href="https://dreamninjas.eu/register/">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://dreamninjas.eu/tools/items">Items</a></li>
+                    <li><a href="https://dreamninjas.eu/tools/xpcalc">XP Calc</a></li>
+                    <li><a class="active" href="https://dreamninjas.eu/tools/piterp">Lua Deob</a></li>
+                    <li><a href="https://dreamninjas.eu/tools/api">API</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pageinfo">
+            <div class="icon"><i class="mdi mdi-tools"></i></div>
+            <div class="information">
+                <div class="title">Growtopia Deobfuscation</div>
+                <div class="desc">
+                    Quickly deobfuscate PiterP, Yasugami and LuaCompiled obfuscated scripts.
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="main">
+                <div class="calculator">
+                    <div class="box">
+                        <div class="title">Obfuscated Script</div>
+                        <div class="body">
+                            <textarea style="outline: none;padding: 5px;color: rgb(181,181,181);background-color: rgb(51, 51, 51);border: 1px solid rgb(51, 51, 51);border-radius: 3px;font-family: monospace;width: 100%;height:300px" id="scriptinput" placeholder="Paste script here..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="spacer mobile-show"></div>
+
+                    <div class="box">
+                        <div class="title">Deobfuscated Script</div>
+                        <div class="body">
+                            <textarea style="outline: none;padding: 5px;color: rgb(181,181,181);background-color: rgb(51, 51, 51);border: 1px solid rgb(51, 51, 51);border-radius: 3px;font-family: monospace;width: 100%;height:300px" id="scriptoutput" placeholder="Nothing yet..." readonly="readonly"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footnote">PiterP if you are reading this, I just want a better challenge. Make better obfuscation 🥺</div>
+        <div id="notif"></div>
+    </body>
+    <script>
+        $("#scriptinput").on("input", function(e){
+            DeobPiterP();
+        });
+    </script>
+    <script src="../socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/app.js"></script>
+</html>
