@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <title>API - Dream Ninjas</title>
+        <script src="../cdn-cgi/apps/head/EBPjnEE6P70ZcQIXXCtJnCOtFAk.js"></script><link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet" type="text/css">
+        <link href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Snowstorm/20131208/snowstorm-min.js" integrity="sha512-rMkLONrw50boYG/6Ku0E8VstfWMRn5D0dX3QZS26Mg0rspYq4EHxYOULuPbv9Be2HBbrrmN8dpPgYUeJ4bINCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link href="../assets/style.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/xt256.min.css" integrity="sha512-fhvZU0PRhieZyHjHD1sG4Zvo5EJjsnx90draikv9gBEFre1UXo4Neg3nT4xZ71TEdOLXif1C5llTy0Ughy+xSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <!-- SEO and Embedded Data -->
+        <meta charset="utf-8">
+        <meta content="Katie" name="author">
+        <meta itemprop="name" content="API - Dream Ninjas">
+        <meta itemprop="description" content="Documentation of our Application Programming Interface for Growtopia-related tools and methods we provide.">
+        <meta itemprop="image" content="/assets/app-512.png">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#26ED26">
+        <meta property="og:type" content="website">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        <meta property="og:url" content="https://dreamninjas.eu/tools/api">
+        <meta property="og:image" content="/assets/app-512.png">
+        <link rel="shortcut icon" href="../favicon.ico">
+        <meta name="apple-mobile-web-app-capable" content="no">
+        <meta name="apple-mobile-web-app-title" content="API - Dream Ninjas">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta content="Documentation of our Application Programming Interface for Growtopia-related tools and methods we provide." name="description">
+        <meta name="theme-color" content="#26ED26">
+    </head>
+    <body>
+        <div style="width: 100%;" id="bartotal">
+            <div id="bar" style="height:3px;width:0%;background-color:green;"></div>
+        </div>
+        <div class="header">
+            <div class="logoblock">
+                <div class="logo">
+                    Dream Ninjas
+                </div>
+                <div class="search">
+                    <form method="POST" class="searchform">
+                        <input type="search" name="search">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="navtabs">
+                <div class="main">
+                    <ul>
+                        <li><a href="https://dreamninjas.eu/home/">Home</a></li>
+                        <li><a href="https://dreamninjas.eu/blog/">Blog</a></li>
+                        <li><a class="active" href="index.html">Tools</a></li>
+                        <li><a href="https://dreamninjas.eu/scanner/">Scanner</a></li>
+                    </ul>
+                </div>
+                <div class="secondary">
+                    <ul class="mobile-show">
+                        <li><a onclick="ToggleMenu()"><i class="mdi mdi-apps"></i></a></li>
+                    </ul>
+                    <ul class="mobile-menu">
+                        <li><a href="https://dreamninjas.eu/login/">Login</a></li>
+                        <li><a href="https://dreamninjas.eu/register/">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://dreamninjas.eu/tools/items">Items</a></li>
+                    <li><a href="https://dreamninjas.eu/tools/xpcalc">XP Calc</a></li>
+                    <li><a href="https://dreamninjas.eu/tools/piterp">Lua Deob</a></li>
+                    <li><a class="active" href="https://dreamninjas.eu/tools/api">API</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pageinfo">
+            <div class="icon"><i class="mdi mdi-api"></i></div>
+            <div class="information">
+                <div class="title">API</div>
+                <div class="desc">
+                    Documentation on the available Application Programming Interface methods we provide.
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <div class="box">
+                    <div class="title">
+                        Table of Contents
+                    </div>
+                    <div class="body small">
+                        <table class="simple small">
+                            <tr style="cursor:pointer;" onclick="document.getElementById('info').scrollIntoView();">
+                                <th>Info</th>
+                                <td>1</td>
+                            </tr>
+                            <tr style="cursor:pointer;" onclick="document.getElementById('outputs').scrollIntoView();">
+                                <th>Outputs</th>
+                                <td>2</td>
+                            </tr>
+                            <tr style="cursor:pointer;" onclick="document.getElementById('version').scrollIntoView();">
+                                <th>Method: Growtopia Version</th>
+                                <td>3</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="box big">
+                    <div class="title">
+                        Info
+                    </div>
+                    <div class="body">
+                        The API base path is
+
+                        <pre>https://dreamninjas.eu/api/</pre>
+        
+                        There is no API key required.
+                    </div>
+                </div>
+
+                <div class="spacer"></div>
+                
+                <div class="box big" id="outputs">
+                    <div class="title">
+                        Outputs
+                    </div>
+                    <div class="body">
+                        The API offers various ways to receive your data for easy parsing. The output choice will go AFTER the API url. Currently supported outputs are:
+                        
+                        <div class="spacer"></div>
+                        <b>Nothing</b> If you do not specify a format, it will be outputted as a basic string.
+                        <div class="spacer"></div>
+                        <table class="apicontent" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="type">GET</td>
+                                <td class="input"><input type="text" readonly="readonly" value="https://dreamninjas.eu/api/&lt;category&gt;/&lt;method&gt;"></td>
+                            </tr>
+                        </table>
+
+                        <div class="spacer"></div>
+                        <b>JSON</b> Your data will be outputted with a JSON format, and it will usually include status codes.
+                        <div class="spacer"></div>
+                        <table class="apicontent" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="type">GET</td>
+                                <td class="input"><input type="text" readonly="readonly" value="https://dreamninjas.eu/api/&lt;category&gt;/&lt;method&gt;/json"></td>
+                            </tr>
+                        </table>
+
+                        <div class="spacer"></div>
+                        <b>RTVars</b> Will use the same format that Growtopia uses.
+                        <div class="spacer"></div>
+                        <table class="apicontent" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="type">GET</td>
+                                <td class="input"><input type="text" readonly="readonly" value="https://dreamninjas.eu/api/&lt;category&gt;/&lt;method&gt;/rtvars"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="spacer"></div>
+
+                <div class="box big" id="version">
+                    <div class="title">
+                        Method: Growtopia Version&nbsp;&nbsp;&nbsp;<span class="tag grey">Free</span>
+                    </div>
+                    <div class="body">
+                        This will get the currently <b>available</b> version to log into Growtopia. You may not be forced to update to this version, but it is what's currently out.
+                        <div class="spacer"></div>
+                        <table class="apicontent" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="type">GET</td>
+                                <td class="input"><input type="text" readonly="readonly" value="https://dreamninjas.eu/api/growtopia/version"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="spacer"></div>
+            </div>
+        </div>
+        <div id="notif"></div>
+    </body>
+    <script src="../socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/app.js"></script>
+</html>
